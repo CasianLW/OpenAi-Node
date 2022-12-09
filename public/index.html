@@ -5,8 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JPO Image generator</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.2.2/zephyr/bootstrap.min.css"
+    />
   </head>
   <body>
-    hello
+    <header>
+      <div class="text-center">AI Image generator</div>
+    </header>
+    <main>
+      <section class="showcase container">
+        <form id="image-form" action="">
+          <h1>Generez votre image</h1>
+          <div>
+            <label for="prompt">Decrivez l'image</label>
+            <input
+              class="form-control"
+              type="text"
+              id="prompt"
+              placeholder="hotdog party ..."
+            />
+          </div>
+          <div>
+            <label for="size">Sélectionnez la taile</label>
+            <select class="form-control" name="size" id="size">
+              <option value="small">Petite</option>
+              <option value="medium" selected>Moyenne</option>
+              <option value="large">Grande</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Let's GO !!</button>
+        </form>
+      </section>
+      <section class="image">
+        <div class="image-container">
+          <h2 class="msg"></h2>
+          <img src="" alt="" id="image" />
+        </div>
+      </section>
+    </main>
   </body>
+  <script src="./main.js"></script>
 </html>
