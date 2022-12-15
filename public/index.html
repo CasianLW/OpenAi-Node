@@ -21,7 +21,7 @@
         <h1>Générez votre image I.A</h1>
         <form method="post" id="image-form">
           <div>
-            <label for="prompt">Décrivez l'image</label>
+            <label for="prompt">Décrivez l'image:</label>
             <input
               class="form-control"
               type="text"
@@ -32,7 +32,7 @@
           </div>
           <div style="display: flex; justify-content: space-between">
             <div>
-              <label for="size">Sélectionnez la taille</label>
+              <label for="size">Choix résolution:</label>
               <select class="form-control" name="size" id="size">
                 <option value="small">Petite</option>
                 <option value="medium" selected>Moyenne</option>
@@ -63,5 +63,20 @@
     </main>
   </body>
   <div class="spinner"></div>
+  <div class="security-wrap">
+    <div class="spinner-spec">
+      <div class="lds-roller">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <p>loading...</p>
+    </div>
+  </div>
   <script defer src="js//main.js"></script>
 </html>
