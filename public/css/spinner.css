@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 /* Spinner From: https://codepen.io/tbrownvisuals/pen/edGYvx */
 .spinner {
   position: fixed;
@@ -12,7 +15,11 @@
   right: 0;
   display: none;
 }
+.img-ctnr > img {
+  /* max-width: 100vw; */
 
+  width: 40%;
+}
 .show {
   display: block;
 }

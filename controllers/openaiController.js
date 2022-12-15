@@ -12,13 +12,19 @@ const generateImage = async (req, res) => {
   try {
     const response = await openai.createImage({
       prompt,
-      n: 1,
+      n: 4,
       size: imageSize,
     });
-    const imageUrl = response.data.data[0].url;
+    const imageUrl1 = response.data.data[0].url;
+    const imageUrl2 = response.data.data[1].url;
+    const imageUrl3 = response.data.data[2].url;
+    const imageUrl4 = response.data.data[3].url;
     res.status(200).json({
       success: true,
-      data: imageUrl,
+      data1: imageUrl1,
+      data2: imageUrl2,
+      data3: imageUrl3,
+      data4: imageUrl4,
     });
   } catch (error) {
     if (error.response) {
