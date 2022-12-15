@@ -36,7 +36,7 @@ const generateImage = async (req, res) => {
     res.status(400).json({
       success: false,
       error:
-        "L'image n'a pas pu être génerée, vous avez peut-être tapé un mot non accepté par la content policie ",
+        "L'image n'a pas pu être génerée, vous avez peut-être tapé un mot non accepté par la content policy ",
     });
   }
 };
