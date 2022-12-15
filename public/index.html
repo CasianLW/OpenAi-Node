@@ -10,39 +10,48 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.2.2/zephyr/bootstrap.min.css"
     />
     <link rel="stylesheet" href="css/spinner.css" />
-    <link href="/dist/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header>
-      <div class="text-center mt-14">AI Image generator</div>
+      <div class="text-center">AI Image generator</div>
     </header>
     <main>
       <section class="showcase container">
+        <h1>Générez votre image I.A</h1>
         <form method="post" id="image-form">
-          <h1>Generez votre image</h1>
           <div>
-            <label for="prompt">Decrivez l'image</label>
+            <label for="prompt">Décrivez l'image</label>
             <input
               class="form-control"
               type="text"
               id="prompt"
               placeholder="hotdog party ..."
+              required
             />
           </div>
-          <div>
-            <label for="size">Sélectionnez la taile</label>
-            <select class="form-control" name="size" id="size">
-              <option value="small">Petite</option>
-              <option value="medium" selected>Moyenne</option>
-              <option value="large">Grande</option>
-            </select>
+          <div style="display: flex; justify-content: space-between">
+            <div>
+              <label for="size">Sélectionnez la taille</label>
+              <select class="form-control" name="size" id="size">
+                <option value="small">Petite</option>
+                <option value="medium" selected>Moyenne</option>
+                <option value="large">Grande</option>
+              </select>
+            </div>
+            <button
+              type="submit"
+              class="btn btn-primary"
+              style="margin-top: 24px"
+            >
+              Let's GO !!
+            </button>
           </div>
-          <button type="submit" class="btn btn-primary">Let's GO !!</button>
         </form>
       </section>
       <section class="image">
         <div class="image-container">
-          <h2 class="msg"></h2>
+          <h3 class="msg">Les images vont apparaître ici.</h3>
           <div class="img-ctnr">
             <img src="" alt="" id="image1" />
             <img src="" alt="" id="image2" />
