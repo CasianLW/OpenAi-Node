@@ -1,5 +1,27 @@
 // const { generateImage } = require("./controllers/openaiController");
 
+// document.onkeypress = function (e) {
+//   e = e || window.event;
+//   // use e.keyCode
+//   const btnSub = document.querySelector(".btn");
+
+//   document.querySelector("#prompt").value == ""
+//     ? // ? (btnSub.style.background = `linear-gradient(
+//       //   97deg,
+//       //   rgb(144, 144, 144) 0%,
+//       //   rgb(84, 84, 84) 43%,
+//       //   rgb(118, 118, 118) 92%
+//       // )`)
+//       // : (btnSub.style.background = `linear-gradient(
+//       //   97deg,
+//       //   rgba(252, 194, 109, 1) 0%,
+//       //   rgba(159, 109, 255, 1) 43%,
+//       //   rgba(226, 119, 172, 1) 92%
+//       // )`);
+//       btnSub.classList.add("btn-active")
+//     : btnSub.classList.add("btn-active");
+// };
+
 function onSubmit(e) {
   e.preventDefault();
   console.log("test");
@@ -17,6 +39,7 @@ function onSubmit(e) {
 async function generateImageRequest(prompt, size) {
   try {
     showSpinner();
+    removeImages();
     const response = await fetch("/openai/generateimage", {
       method: "POST",
       headers: {
@@ -34,7 +57,7 @@ async function generateImageRequest(prompt, size) {
       throw new Error("L'image n'a pas pu être génerée");
     }
     const data = await response.json();
-
+    showImages();
     removeSpinner();
     // console.log(data);
     // const imageUrl = data.data;
@@ -61,3 +84,10 @@ function removeSpinner() {
   document.querySelector(".spinner").classList.remove("show");
 }
 document.querySelector("#image-form").addEventListener("submit", onSubmit);
+
+function showImages() {
+  document.querySelector(".img-ctnr").classList.add("show-images");
+}
+function removeImages() {
+  document.querySelector(".img-ctnr").classList.remove("show-images");
+}
