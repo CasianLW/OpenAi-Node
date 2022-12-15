@@ -72,6 +72,9 @@ async function generateImageRequest(prompt, size) {
     document.querySelector("#image2").src = imageUrl2;
     document.querySelector("#image3").src = imageUrl3;
     document.querySelector("#image4").src = imageUrl4;
+    // message
+    document.querySelector(".msg").textContent =
+      "Images générées avec succes !";
   } catch (error) {
     document.querySelector(".msg").textContent = error;
   }
