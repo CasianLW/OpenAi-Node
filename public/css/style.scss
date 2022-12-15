@@ -1,0 +1,136 @@
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+body {
+  background-color: #0e1218;
+  color: white;
+}
+
+h1 {
+  //
+  font-size: 48px;
+  text-transform: capitalize;
+  font-weight: 600;
+  text-align: center;
+  transition: cubic-bezier(0.42, 0.04, 0.14, 0.99) 0.5s;
+  //   background: -webkit-linear-gradient(#eee, #333);
+  //   background: linear-gradient(
+  //     120deg,
+  //     rgba(255, 255, 255, 1) 0%,
+  //     rgba(255, 255, 255, 1) 15%,
+  //     rgba(155, 35, 234, 1) 92%
+  //   );
+  //   filter: blur(0.2px);
+
+  background: rgb(242, 210, 163);
+  background: linear-gradient(
+    90deg,
+    rgba(242, 210, 163, 1) 0%,
+    rgba(183, 147, 252, 1) 53%,
+    rgba(216, 147, 181, 1) 92%
+  );
+  background-size: 300% 300%;
+  animation: gradient 6s ease infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#image-form {
+  width: 80%;
+  margin: auto;
+  select {
+    width: 150px;
+  }
+}
+
+.img-ctnr {
+  /* max-width: 100vw; */
+  width: 80%;
+  margin: auto;
+  img {
+    transform: scale(0.2);
+    opacity: 0;
+    transition: cubic-bezier(0.42, 0.04, 0.14, 0.99) 2s;
+    width: 100%;
+  }
+}
+.show-images img {
+  transform: scale(1);
+  opacity: 1;
+}
+#image-form {
+  div {
+    padding: 5px 0px;
+  }
+}
+.image-container {
+  animation: gradient 4s ease infinite;
+  background: rgb(255, 249, 242);
+  background: linear-gradient(
+    97deg,
+    rgba(255, 249, 242, 1) 0%,
+    rgba(228, 213, 255, 1) 43%,
+    rgba(227, 192, 209, 1) 92%
+  );
+  background-size: 300% 300%;
+  border-radius: 30px;
+  padding-top: 20px;
+  margin-top: 40px;
+}
+
+// bootstrap modifs
+label {
+  font-size: 16px;
+  padding-bottom: 4px;
+}
+.form-control,
+.btn {
+  border-radius: 50px;
+}
+.btn {
+  max-width: 150%;
+  font-weight: 800;
+  transition: cubic-bezier(0.42, 0.04, 0.14, 0.99) 0.32s;
+
+  background: rgb(252, 194, 109);
+  background: linear-gradient(
+    97deg,
+    rgba(252, 194, 109, 1) 0%,
+    rgba(159, 109, 255, 1) 43%,
+    rgba(226, 119, 172, 1) 92%
+  );
+  background-size: 300% 300%;
+  animation: gradient 6s ease infinite;
+  border: none;
+}
+.btn:hover {
+  transform: scale(1.2);
+}
+
+// .btn-active {
+//   animation: gradient 6s ease infinite;
+//   background-size: 300% 300%;
+
+//   background: rgb(252, 194, 109);
+//   background: linear-gradient(
+//     97deg,
+//     rgba(252, 194, 109, 1) 0%,
+//     rgba(159, 109, 255, 1) 43%,
+//     rgba(226, 119, 172, 1) 92%
+//   );
+//   background: rgb(96, 96, 96);
+//   background: linear-gradient(
+//     97deg,
+//     rgb(144, 144, 144) 0%,
+//     rgb(84, 84, 84) 43%,
+//     rgb(118, 118, 118) 92%
+//   );
+// }
