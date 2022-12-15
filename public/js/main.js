@@ -81,10 +81,16 @@ async function generateImageRequest(prompt, size) {
 }
 
 function showSpinner() {
-  document.querySelector(".spinner").classList.add("show");
+  // OLD
+  // document.querySelector(".spinner").classList.add("show");
+  // NEW
+  document.querySelector(".security-wrap").classList.add("active-spinner");
 }
 function removeSpinner() {
-  document.querySelector(".spinner").classList.remove("show");
+  // OLD
+  // document.querySelector(".spinner").classList.remove("show");
+  // NEW
+  document.querySelector(".security-wrap").classList.remove("active-spinner");
 }
 document.querySelector("#image-form").addEventListener("submit", onSubmit);
 
