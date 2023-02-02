@@ -4,7 +4,13 @@ const express = require("express");
 const dotenv = require("dotenv").config();
 const port = process.env.PORT || 5000;
 const app = express();
+const cors = require("cors");
 
+// pour lancer le index public sur le meme port
+app.use(express.static("public"));
+
+// cors au cas ou de probleme
+// app.use(cors());
 // console.log(123);
 //  Enable body parser
 app.use(express.json());
