@@ -40,7 +40,10 @@ async function generateImageRequest(prompt, size) {
   try {
     showSpinner();
     removeImages();
+
+    // const response = await fetch(`process.env.OPENAI_API_KEY`, {
     const response = await fetch("/openai/generateimage", {
+      // const response = await fetch("http://localhost:5000/openai/generateimage", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
