@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A.I Image generator</title>
+    <link
+      rel="shortcut icon"
+      href="https://cdn.dribbble.com/users/214929/screenshots/4967879/ai-loader-opt.gif"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.2.2/zephyr/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/spinner.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <!-- <div class="text-center">AI Image generator</div> -->
+    </header>
+    <main>
+      <section class="showcase container" style="margin-top: 8rem">
+        <h1>Générez votre image I.A</h1>
+        <form method="post" id="image-form">
+          <div>
+            <label for="prompt">Décrivez l'image:</label>
+            <input
+              class="form-control"
+              type="text"
+              id="prompt"
+              placeholder="hotdog party ..."
+              required
+            />
+          </div>
+          <div style="display: flex; justify-content: space-between">
+            <div>
+              <label for="size">Choix résolution:</label>
+              <select class="form-control" name="size" id="size">
+                <option value="small">Petite</option>
+                <option value="medium" selected>Moyenne</option>
+                <option value="large">Grande</option>
+              </select>
+            </div>
+            <button
+              type="submit"
+              class="btn btn-primary"
+              style="margin-top: 24px"
+            >
+              Let's GO !!
+            </button>
+          </div>
+        </form>
+      </section>
+      <section class="image">
+        <div class="image-container">
+          <h3 class="msg">Les images vont apparaître ici.</h3>
+          <div class="img-ctnr">
+            <img src="" alt="" id="image1" />
+            <img src="" alt="" id="image2" />
+            <img src="" alt="" id="image3" />
+            <img src="" alt="" id="image4" />
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  <div class="spinner"></div>
+  <div class="security-wrap">
+    <div class="spinner-spec">
+      <div class="lds-roller">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <p>loading...</p>
+    </div>
+  </div>
+  <script defer src="js//main.js"></script>
+</html>
