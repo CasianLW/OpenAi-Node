@@ -1,6 +1,6 @@
 # OpenAi-Node
 
-## Test projet of OpenAi - working
+## About the project
 
 https://www.openai.casian.fr/
 
